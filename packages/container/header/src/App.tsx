@@ -1,10 +1,8 @@
 import React from 'react';
 //@ts-ignore
-import CounterAppTwo from 'app2/CounterAppTwo';
+import CounterAppOne from 'news/CounterAppOne';
 //@ts-ignore
-import CounterAppOne from 'app1/CounterAppOne';
-//@ts-ignore
-import ButtonMUI from 'app1/ButtonMUI';
+import ButtonMUI from 'news/ButtonMUI';
 
 export default () => (
   <div style={{ margin: '20px' }}>
@@ -39,7 +37,7 @@ export default () => (
           </div>
           <div style={{ border: '1px dashed black', padding: '2rem' }}>
             <h2>APP-2</h2>
-            <CounterAppTwo />
+            {/* <CounterAppTwo /> */}
           </div>
           <div style={{ border: '1px dashed black', padding: '2rem', marginLeft: '2rem' }}>
             <h2>APP-1 buttons</h2>

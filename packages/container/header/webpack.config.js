@@ -28,11 +28,11 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'container',
-      library: { type: 'var', name: 'container' },
+      name: 'header',
+      library: { type: 'var', name: 'header' },
       remotes: {
-        app1: 'app1',
-        app2: 'app2',
+        news: 'news'
+        //app2: 'app2',
       },
       shared: {
         ...deps,

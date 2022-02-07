@@ -2404,7 +2404,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/cli-service@npm:^4.5.15, @vue/cli-service@npm:~4.5.0":
+"@vue/cli-service@npm:^4.5.15":
   version: 4.5.15
   resolution: "@vue/cli-service@npm:4.5.15"
   dependencies:
@@ -11773,16 +11773,6 @@ __metadata:
   checksum: aca58e73a3a5d933d02e0bdddedc53ee14f7c2ec264f97ac915b9d4482d077a38e422aa664631d60a672cd3cdb4054eb2e6c0303f54882453dacb6483e482d34
   languageName: node
   linkType: hard
-
-"shop@workspace:packages/mainApp/shop":
-  version: 0.0.0-use.local
-  resolution: "shop@workspace:packages/mainApp/shop"
-  dependencies:
-    "@vue/cli-plugin-babel": ~4.5.0
-    "@vue/cli-plugin-eslint": ~4.5.0
-    "@vue/cli-service": ~4.5.0
-  languageName: unknown
-  linkType: soft
 
 "shopping@workspace:packages/mainApp/shopping":
   version: 0.0.0-use.local

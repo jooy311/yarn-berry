@@ -2404,7 +2404,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/cli-service@npm:~4.5.0":
+"@vue/cli-service@npm:^4.5.15, @vue/cli-service@npm:~4.5.0":
   version: 4.5.15
   resolution: "@vue/cli-service@npm:4.5.15"
   dependencies:
@@ -8642,6 +8642,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mail@workspace:packages/mainApp/mail":
+  version: 0.0.0-use.local
+  resolution: "mail@workspace:packages/mainApp/mail"
+  dependencies:
+    "@emotion/react": ^11.7.0
+    "@emotion/styled": ^11.6.0
+    "@mui/material": ^5.2.2
+    "@testing-library/jest-dom": ^5.16.1
+    "@testing-library/react": ^12.1.2
+    "@testing-library/user-event": ^13.5.0
+    "@types/node": ^16.11.11
+    "@types/react": ^17.0.5
+    "@types/react-dom": ^17.0.5
+    html-webpack-plugin: ^5.5.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    serve: 13.0.2
+    ts-loader: ^9.1.2
+    typescript: ^4.2.4
+    web-vitals: ^2.1.4
+    webpack: 5.64.4
+    webpack-cli: 4.9.1
+    webpack-dev-server: 4.6.0
+  languageName: unknown
+  linkType: soft
+
 "make-dir@npm:^2.0.0":
   version: 2.1.0
   resolution: "make-dir@npm:2.1.0"
@@ -11748,13 +11774,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shop@workspace:packages/mainApp/shopping/shop":
+"shop@workspace:packages/mainApp/shop":
   version: 0.0.0-use.local
-  resolution: "shop@workspace:packages/mainApp/shopping/shop"
+  resolution: "shop@workspace:packages/mainApp/shop"
   dependencies:
     "@vue/cli-plugin-babel": ~4.5.0
     "@vue/cli-plugin-eslint": ~4.5.0
-    "@vue/cli-plugin-typescript": ~4.5.0
     "@vue/cli-service": ~4.5.0
   languageName: unknown
   linkType: soft
@@ -11766,7 +11791,7 @@ __metadata:
     "@vue/cli-plugin-babel": ~4.5.0
     "@vue/cli-plugin-eslint": ~4.5.0
     "@vue/cli-plugin-typescript": ~4.5.0
-    "@vue/cli-service": ~4.5.0
+    "@vue/cli-service": ^4.5.15
   languageName: unknown
   linkType: soft
 

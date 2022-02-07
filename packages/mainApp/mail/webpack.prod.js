@@ -1,9 +1,9 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
-const deps = require('./package.json').dependencies; //root space의 의존성을 가져옴
+const deps = require('./package.json').dependencies;
 
 module.exports = {
-  entry: './src/index.js', //나중에 ts로 바꿀 것.
+  entry: './src/index.ts',
   mode: 'development',
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
@@ -12,18 +12,19 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx|tsx|ts)$/,
-        loader: 'ts-loader', //이게 맞으려나?
+        loader: 'ts-loader',
         exclude: /node_modules/,
       },
     ],
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'header',
-      library: { type: 'var', name: 'header' },
-      remotes: {
-        news: 'news',
-        mail: 'mail'
+      name: 'mail',
+      library: { type: 'var', name: 'mail' },
+      filename: 'remoteEntry.js',
+      exposes: {
+        // expose each component
+        './CounterAppTwo': './src/components/CounterAppTwo',
       },
       shared: {
         ...deps,
@@ -36,7 +37,7 @@ module.exports = {
       },
     }),
     new HtmlWebpackPlugin({
-      template: './public/index.prod.html',
+      template: './public/index.html',
     }),
   ],
 };

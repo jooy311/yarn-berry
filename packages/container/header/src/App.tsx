@@ -1,4 +1,7 @@
+
 import React from 'react';
+//@ts-ignore
+import CounterAppTwo from 'mail/CounterAppTwo';
 //@ts-ignore
 import CounterAppOne from 'news/CounterAppOne';
 //@ts-ignore
@@ -32,12 +35,14 @@ export default () => (
               border: '1px dashed black',
             }}
           >
+
+       
             <h2>APP-1</h2>
             <CounterAppOne />
           </div>
           <div style={{ border: '1px dashed black', padding: '2rem' }}>
             <h2>APP-2</h2>
-            {/* <CounterAppTwo /> */}
+            <CounterAppTwo />
           </div>
           <div style={{ border: '1px dashed black', padding: '2rem', marginLeft: '2rem' }}>
             <h2>APP-1 buttons</h2>

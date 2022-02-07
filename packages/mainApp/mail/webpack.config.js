@@ -9,10 +9,10 @@ module.exports = {
   devServer: {
     static: {directory: path.join(__dirname, 'dist')
     },
-    port: 3000    
+    port: 3002 //news가 이용할 포트
   },
   output: {
-    publicPath: 'http://localhost:3000/',
+    publicPath: 'http://localhost:3002/',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
@@ -21,18 +21,20 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx|tsx|ts)$/,
-        loader: 'ts-loader',
+        loader: 'ts-loader', //ts쓰는 경우에만 추가하는 것 같은데 
         exclude: /node_modules/,
       },
     ],
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'header',
-      library: { type: 'var', name: 'header' },
-      remotes: {
-        news: 'news',
-        mail: 'mail'
+      name: 'mail',
+      library: { type: 'var', name: 'mail' },
+      filename: 'remoteEntry.js',
+      exposes: {
+        // expose each component
+        './CounterAppTwo': './src/components/CounterAppTwo',
+        //'./ButtonMUI': './src/components/ButtonMUI',
       },
       shared: {
         ...deps,
@@ -41,11 +43,15 @@ module.exports = {
           singleton: true,
           eager: true,
           requiredVersion: deps['react-dom'],
-        },
+        //   '@mui/material/styles ': {
+        //     singleton: true, // Sharing styles package as singleton                 
+        // }      
+                    
+        }       
       },
     }),
     new HtmlWebpackPlugin({
-      template: './public/index.dev.html',
+      template: './public/index.html',
     }),
   ],
 };
